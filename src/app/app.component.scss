@@ -1,0 +1,22 @@
+nav {
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        float: right;
+    
+    
+        li {
+            list-style: none;
+    
+            a {
+                font-size: 1.1rem;
+                margin-right: 1.5rem;
+                font-weight: 500;
+            }
+        }
+    }
+
+}
+
