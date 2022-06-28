@@ -60,6 +60,7 @@
         input {
             width        : 100%;
             margin-bottom: 20px;
+            color: #fff;
         }
 
         input:where([type="email"], [type="password"]) {
@@ -75,6 +76,7 @@
         input:where([type="submit"]) {
             background-color: #fff;
             padding: .3rem 1rem;
+            color: #000;
             border: none;
             border-radius: 8px;
         }
@@ -85,6 +87,10 @@
             position: absolute;
             bottom: 20px;
             left: 17.5%;
+        }
+
+        input:disabled {
+        background-color: gray;
         }
     }
 

@@ -1,16 +1,17 @@
 <div class="registerBox">
     <h1> Register Now</h1>
-   <form>
+   <form [formGroup]="register_form" (ngSubmit)="register()">
     <p>Username</p>
-    <input type="text" name="" placeholder="Enter Username">
+    <input type="text" name="" placeholder="Enter Username" formControlName="username">
     <!-- <small class="text-danger">Please enter valid email</small> -->
     <p>Email</p>
-    <input type="email" name="" placeholder="Enter Email">
+    <input type="email" name="" placeholder="Ex. Mac@divyesh.com" formControlName="email">
     <p>Password</p>
     
-    <input type="password" name="" placeholder="Enter Password">
+    <input type="password" name="" placeholder="Enter Password" formControlName="password">
 
-    <input type="submit" value="Register">
+    <input type="submit" value="Register" [disabled]="!register_form.valid">
+    <!-- <button type="submit" [disabled]="!register_form.valid">Register</button> -->
 
     <p> <a routerLink="/Login">Already have an account</a></p>
    </form>

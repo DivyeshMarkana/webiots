@@ -31,31 +31,41 @@
         input {
             width        : 100%;
             margin-bottom: 20px;
+            color        : #fff;
         }
 
         input:where([type="text"], [type="email"], [type="password"]) {
-            border: none;
+            border       : none;
             border-bottom: 1px solid #fff;
-            background: transparent;
-            outline: none;
-            height: 40px;
+            background   : transparent;
+            outline      : none;
+            height       : 40px;
 
 
         }
 
         input:where([type="submit"]) {
             background-color: #fff;
-            padding: .3rem 1rem;
-            border: none;
-            border-radius: 8px;
+            padding         : .3rem 1rem;
+            border          : none;
+            border-radius   : 8px;
+            color           : #000;
         }
 
         p:last-child {
             font-weight: normal;
-            font-size: 13px;
-            position: absolute;
-            bottom: 14px;
-            left: 28%;
+            font-size  : 13px;
+            position   : absolute;
+            bottom     : 14px;
+            left       : 28%;
+        }
+
+        input:disabled {
+            background-color: gray;
+        }
+
+        input.ng-touched.ng-invalid input {
+            background: rgb(255, 213, 213);
         }
     }
 

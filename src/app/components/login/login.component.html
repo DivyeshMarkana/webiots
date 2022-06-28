@@ -21,14 +21,15 @@
 
 <div class="loginBox">
     <h1>Login Here</h1>
-   <form>
+   <form [formGroup]="login_form" (ngSubmit)="logIn()">
     <p>Email</p>
-    <input type="email" name="" placeholder="Enter email">
+    <input type="email" name="" placeholder="Ex. Mac@divyesh.com" formControlName="email">
     <!-- <small class="text-danger">Please enter valid email</small> -->
     <p>password</p>
-    <input type="password" name="" placeholder="Enter Password">
+    <input type="password" name="" placeholder="Enter Password" formControlName="password">
 
-    <input type="submit" value="Login">
+    <input type="submit" value="Login" [disabled]="!login_form.valid">
+    <!-- <button type="submit" [disabled]="!login_form.valid">Login</button> -->
 
     <p> Dont't have an account <a routerLink="/Register">Register now</a></p>
    </form>

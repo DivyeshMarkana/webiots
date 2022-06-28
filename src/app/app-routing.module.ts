@@ -2,8 +2,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { ToDoDashboardComponent } from './components/to-do-dashboard/to-do-dashboard.component';
+import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
+  {
+    path: '', redirectTo: 'Login', pathMatch: 'full'
+  },
+  {
+    path: 'todo-dashboard', component: ToDoDashboardComponent, canActivate: [AuthGuard]
+  },
   {
     path: 'Login', component: LoginComponent
   },

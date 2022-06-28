@@ -1,4 +1,17 @@
 nav {
+    display: flex;
+    align-items: center;
+    padding: .7vw 3vw;
+
+    div {
+        display: flex;
+        align-items: center;
+
+        i {
+            font-size: 1.5rem;
+            margin-right: 1.5rem;
+        }
+    }
 
     ul {
         display: flex;
@@ -10,10 +23,11 @@ nav {
         li {
             list-style: none;
     
-            a {
+            a, span {
                 font-size: 1.1rem;
-                margin-right: 1.5rem;
+                margin-right: 1.2rem;
                 font-weight: 500;
+                cursor: pointer;
             }
         }
     }

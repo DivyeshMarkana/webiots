@@ -1,12 +1,42 @@
-
 <nav class="navbar" style="background-color: #e3f2fd;">
-  <ul class="nav-list">
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/Login">Login</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/Register">Register</a>
-    </li>
-  </ul>
+
+  <div>
+
+    <i class="bi bi-house-door-fill" routerLink="/todo-dashboard"></i>
+    <h4 routerLink="/todo-dashboard">To-Do App</h4>
+  </div>
+
+  <!-- <ng-container *ngIf="!isLoggedIn"> -->
+
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/Login">Login</a>
+      </li>
+
+      <li>
+        <a> | </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/Register">Register</a>
+      </li>
+
+      <li>
+        <a> | </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" (click)="logout()">Logout</a>
+      </li>
+    </ul>
+  <!-- </ng-container> -->
+
+  <!-- <ng-container  *ngIf="isLoggedIn"> -->
+    
+      <!-- <li class="nav-item">
+        <a class="nav-link" (click)="logout()">Logout</a>
+      </li> -->
+    
+  <!-- </ng-container> -->
+
 </nav>
 <router-outlet></router-outlet>
