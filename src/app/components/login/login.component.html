@@ -1,36 +1,13 @@
-<!-- <div id="login-form">
-
-    <h3>Login</h3>
-
-    <form>
-        <div class="mb-3">
-          <label for="eamil" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="eamil" aria-describedby="emailHelp">
-          <small id="emailHelp" class="form-text text-danger">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="mb-3">
-          <label for="password" class="form-label">Password</label>
-          <input type="password" class="form-control" id="password">
-        </div>
-        <button type="submit" class="btn btn-primary">Login</button>
-        <p> Dont't have an account <a routerLink="/Register">Register now</a></p>
-      </form>
-
-</div> -->
-
 
 <div class="loginBox">
     <h1>Login Here</h1>
    <form [formGroup]="login_form" (ngSubmit)="logIn()">
     <p>Email</p>
     <input type="email" name="" placeholder="Ex. Mac@divyesh.com" formControlName="email">
-    <!-- <small class="text-danger">Please enter valid email</small> -->
     <p>password</p>
     <input type="password" name="" placeholder="Enter Password" formControlName="password">
 
     <input type="submit" value="Login" [disabled]="!login_form.valid">
-    <!-- <button type="submit" [disabled]="!login_form.valid">Login</button> -->
-
     <p> Dont't have an account <a routerLink="/Register">Register now</a></p>
    </form>
 </div>
